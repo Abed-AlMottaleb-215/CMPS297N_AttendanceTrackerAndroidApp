@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient_background"
+    tools:context=".Add_a_Course">
+    <!-- This is the layout that is used to add a course. -->
+
+    <!-- Here the user must enter the Course name (ex: CMPS297N). -->
+    <EditText
+        android:id="@+id/add_course_section"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/smooth_edge_text_views"
+        android:hint="Enter Course Section"
+        android:inputType="number"
+        android:padding="20dp"
+        app:layout_constraintBottom_toTopOf="@+id/confirm_add_course"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <!-- Here the users enters the course section (section 1,2 ...etc). -->
+    <EditText
+        android:id="@+id/add_course_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/smooth_edge_text_views"
+        android:hint="Enter Course Name"
+        android:padding="20dp"
+        app:layout_constraintBottom_toTopOf="@+id/add_course_section"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <!-- This button performs the intent of adding a course to the Database. -->
+    <Button
+        android:id="@+id/confirm_add_course"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_marginBottom="12dp"
+        android:background="@drawable/rounded_edge_text_view"
+        android:onClick="AddToCourseList"
+        android:padding="20dp"
+        android:text="Add Course"
+        app:layout_constraintBottom_toTopOf="@+id/back"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.501"
+        app:layout_constraintStart_toStartOf="parent" />
+    <!-- Cancel adding the course and go back to the previous screen. -->
+    <Button
+        android:id="@+id/back"
+        android:layout_width="135dp"
+        android:layout_height="67dp"
+
+        android:layout_marginBottom="228dp"
+        android:background="@drawable/rounded_edge_text_view"
+        android:onClick="BackToCourseList"
+        android:text="Back"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

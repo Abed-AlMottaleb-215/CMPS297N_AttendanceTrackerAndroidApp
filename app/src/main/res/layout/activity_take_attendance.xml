@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient_background"
+    tools:context=".Take_Attendance">
+    <!-- Taking attendance Activity layout-->
+
+    <!-- Button to return to previous activity layout-->
+    <Button
+        android:id="@+id/manual_attendance2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/smooth_edges_buttons"
+        android:onClick="backToDates"
+        android:paddingHorizontal="50dp"
+        android:text="Back"
+        android:layout_margin="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:layout_editor_absoluteX="0dp" />
+
+    <!-- Layout Title.-->
+    <TextView
+        android:id="@+id/take_attendance_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:background="@drawable/smooth_edge_text_views"
+        android:padding="10dp"
+        android:text="Today's Attendance"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Click this button to use the "Scan Barcode"  feature.-->
+    <Button
+        android:id="@+id/capture_id_photo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20sp"
+        android:layout_marginTop="80dp"
+        android:background="@drawable/smooth_edges_buttons"
+        android:onClick="scanBarcode"
+        android:paddingHorizontal="50dp"
+        android:text="Scan Barcode "
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.6"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/take_attendance_title" />
+
+    <!-- Click this button to take attendance by typing in Student's information manually-->
+    <Button
+        android:id="@+id/manual_attendance"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:background="@drawable/smooth_edges_buttons"
+        android:onClick="ManualEntry"
+        android:paddingHorizontal="50dp"
+        android:text="Add Manually"
+        app:layout_constraintBottom_toTopOf="@+id/manual_attendance2"
+        tools:layout_editor_absoluteX="0dp" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

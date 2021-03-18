@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".List_of_Attendees"
+    android:background="@drawable/gradient_background">
+    <!-- This layout displays information relative to a certain course.-->
+    <!-- such as course name and section, attendees for a specific date-->
+
+    <!-- Button to go back to previous page.-->
+    <Button
+        android:id="@+id/manual_attendance3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/smooth_edges_buttons"
+        android:onClick="backToDates"
+        android:paddingHorizontal="50dp"
+        android:text="Back"
+        android:layout_margin="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:layout_editor_absoluteX="0dp" />
+
+    <!-- Displays the course name and section. -->
+    <TextView
+        android:id="@+id/course_title_attendance"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/smooth_edge_text_views"
+        android:text="Course name here \n Section #, date and \n time"
+        android:textColor="@color/black"
+        android:padding="20dp"
+        />
+
+    <!-- displays the date of the lecture.-->
+    <TextView
+        android:id="@+id/attendance_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Date Here"
+        app:layout_constraintTop_toBottomOf="@id/course_title_attendance"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="50sp"
+        android:padding="20dp"
+        android:textSize="30sp"
+        />
+
+    <!-- Title of list with the name of attendees on a relative date.-->
+    <TextView
+        android:id="@+id/attendees_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/attendance_date"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_margin="20dp"
+        android:text="Attendees"
+        android:padding="20dp"
+        android:textColor="@color/black"
+        android:textSize="50sp"
+        />
+
+    <!-- List with the name of attendees on a relative date.-->
+    <ListView
+        android:id="@+id/attendees_list"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:clickable="false"
+        app:layout_constraintBottom_toTopOf="@+id/manual_attendance3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/attendees_text" />
+</androidx.constraintlayout.widget.ConstraintLayout>

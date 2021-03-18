@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Take_Manual_Attendance"
+    android:background="@drawable/gradient_background">
+    <!-- Manual attendance taking layout-->
+
+    <!-- EditText to enter the student ID in -->
+    <EditText
+        android:id="@+id/enter_id"
+        android:layout_width="250sp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:hint="Enter a 9 digit ID"
+        android:inputType="number"
+        android:digits="0123456789"
+        android:background="@drawable/smooth_edge_text_views"
+        android:padding="10dp"
+        android:layout_marginTop="200dp"
+        android:paddingStart="30dp"
+        />
+    <!-- EditText to enter the student name in -->
+    <EditText
+        android:id="@+id/enter_name"
+        android:layout_width="250sp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/enter_id"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:hint="Name"
+        android:background="@drawable/smooth_edge_text_views"
+        android:padding="10dp"
+        android:paddingStart="30dp"
+        android:layout_marginTop="20dp"
+        />
+
+    <!-- Button to confirm taking attendance according to the info added to the above EditTexts-->
+    <Button
+        android:id="@+id/manual_attendance_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="50dp"
+        app:layout_constraintBottom_toTopOf="@id/manual_attendance_Back"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_margin="16dp"
+        android:text="Take Attendance"
+        android:background="@drawable/smooth_edges_buttons"
+        android:onClick="takeAttendance"
+        />
+
+    <!-- Button to go back to previous activity layout-->
+    <Button
+        android:id="@+id/manual_attendance_Back"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/smooth_edges_buttons"
+        android:onClick="go_Back"
+        android:paddingHorizontal="50dp"
+        android:text="Back"
+        android:layout_margin="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:layout_editor_absoluteX="0dp" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
